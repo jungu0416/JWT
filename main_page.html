@@ -19,16 +19,6 @@
 	box-sizing: border-box;
 }
 
-.content {
-	width: 500px;
-	height: 650px;
-	position: absolute;
-	top: 43%;
-	left: 50%;
-	margin-top: -250px;
-	margin-left: -250px;
-}
-
 .inspiration {
 	font-size: 14px;
 	text-align: center;
@@ -37,6 +27,24 @@
 	bottom: 10px;
 	width: 100%;
 }
+.login {
+	font-size: 18px;
+	text-align: center;
+	color: #d0d0d0;
+	position: absolute;
+	bottom: 20%;
+	width: 100%;
+}
+.guest{
+	font-size: 18px;
+	text-align: center;
+	color: #d0d0d0;
+	position: absolute;
+	bottom: 15%;
+	width: 100%;
+}
+
+
 
 a {
 	color: rgba(255,214,70, 1);
@@ -247,56 +255,7 @@ a:hover {
 	}
 }
 
-.sayHello{
-	text-align: center;
 
-}
-.btn_login{
-	position: absolute;
-	top: 85%;
-    left: 37%;
-}
-.btn_guest{
-	position: absolute;
-	top: 95%;
-    left: 31.5%;
-}
-.btn_custom{
-	background: #141414;
-    color: #fff;
-    border: none;
-    position: relative;
-    height: 40px;
-    font-size: 1.5em;
-    padding: 0 1em;
-    cursor: pointer;
-    transition: 800ms ease all;
-    outline: none;
-}
-.btn_custom:hover{
-	background:#fff;
-	 color:#000000;
-}
-.btn_custom:before,button:after{
-	content:'';
-	position:absolute;
-	top:0;
-	right:0;
-	height:2px;
-	width:0;
-	background: #7e7e7e;
-	transition:400ms ease all;
-}
-.btn_custom:after{
-	right:inherit;
-	top:inherit;
-	left:0;
-	bottom:0;
-}
-.btn_custom:hover:before,.btn_custom:hover:after{
-  width:100%;
-  transition:800ms ease all;
-}	
 </style>
 <body>
     <div class="content">
@@ -332,14 +291,11 @@ a:hover {
             <span class="circle"></span>
         </div>
         <div class="circle-central"></div>
-		<div class="btn_login">
-			<button class="btn_custom">로그인</button>
-		</div>
-		<div class="btn_guest">
-			<button class="btn_custom">게스트 입장</button>
-		</div>
     </div>
-    <p class="inspiration">Inspired by JunguKang</a></p>
+	
+	<p class="login"><a href="">Login</a></p>	
+	<p class="guest"><a href="">Guest</a></p>
+    <p class="inspiration">Inspired by JunguKang</p>
 
 
 
