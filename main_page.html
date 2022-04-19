@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="projectlist.css" rel="stylesheet">	
     <title>Potatoo</title>
 </head>
 <link href="projectlist.css" rel="stylesheet">
@@ -15,7 +14,7 @@
 
         modalClick.addEventListener("click", function(e) {
 
-            let z, elmnt, file, xhttp;
+            let z, elmnt, file, xhttp; 
 
             z = document.getElementsByTagName("*");
 
@@ -27,7 +26,18 @@
                     xhttp = new XMLHttpRequest();
                     xhttp.onreadystatechange = function () {
                         if (this.readyState == 4) {
-                            if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+                            if (this.status == 200) { 
+                               
+                                elmnt.innerHTML = this.responseText;
+                            
+                                let close_img = document.querySelector(".close-img");
+
+                                close_img.addEventListener("click", function () {
+                                    location.reload();
+                                });
+
+                                document.getElementsByClassName("guest")[0].style.display = "none";
+                            }
                             if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
                             /* Remove the attribute, and call this function once more: */
                             elmnt.removeAttribute("data-include");
@@ -46,7 +56,6 @@
 </script>
 <body>
     <div class="content">
-    
         <div class="circle-container circle-container-1">
             <span class="circle"></span>
         </div>
