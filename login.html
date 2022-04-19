@@ -42,32 +42,57 @@
         background: #505050;
     }
     .modal-header{
-        margin: 2%;
+        margin: 3%;
         font-size: 50px;
     }
+    .login-div{
+        padding: 4%;
+    }
+    .input-Style{
+        background-color: #747474;
+        border: none;
+        width: 220px;
+        height: 40px;
+    }
+    .login-div2{
+        margin: 8%;
+    }
+    .login-sub{
+        background: #505050;
+        border: none;
+    }
 
+    /* @media width 500*/
+    @media screen and (max-width: 500px) { 
+        /* 모바일에 사용될 스트일 시트를 여기에 작성합니다. */
+        
+
+
+
+
+
+
+    }
 
 </style>
-<script>   
-
-</script>
 <body>
     <div class="modal">
         <article class="sign-in-modal">
             <div class="modal-close"><img class="close-img" src="close.png"></div>
             <div class="modal-header">POTATOO</div>
             <form action="/login" method="post">
-                <div class="">
-                    <div class="">
-                        <div>아이디</div>
-                        <input type="text">
+                <div class="login-div"> 
+                    <div class="login-div2"> 
+                        <input type="text" name="userID" class="input-Style">
                     </div>
-                    <div class="">
-                        <div>비밀번호</div>
-                        <input type="text">
+                    <div class="login-div2">
+                        <input type="password" name="userPW" class="input-Style">
+                    </div>
+                    <div>
+                        <input type="submit" value="로그인" class="login-sub">
+                        <button class="login-sub">회원가입</button>
                     </div>
                 </div>
-                <input type="submit" value="로그인" class="login-sub">
             </form>
         </article>
     </div>
