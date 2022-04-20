@@ -36,3 +36,18 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+bootWar{
+	archiveBaseName = 'projectlist'
+	archiveFileName = 'projectlist.war'
+	archiveVersion = "0.0.0"
+}
+
+war {
+    baseName = 'projectlist'
+    archiveName 'projectlist.war'
+}
+
+bootWar.enabled = false
+war.enabled = true
+
