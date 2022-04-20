@@ -20,7 +20,7 @@ pipeline {
 		stage('execute'){
 			steps{
 				echo 'starting...'
-				sh './home/tomcat9_instance/instance1/jenkins.sh'
+				sh 'sh /home/tomcat9_instance/instance1/jenkins.sh'				
 				echo 'Apply done'
 			}		
 		}
