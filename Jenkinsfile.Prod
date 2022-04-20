@@ -20,10 +20,10 @@ pipeline {
 		stage('execute'){
 			steps{
 				echo 'starting...'
-				// sh "쉘 끄고 키고 ㄱ"
+				sh './home/tomcat9_instance/instance1/jenkins.sh'
+				echo 'Apply done'
 			}		
 		}
-		
 		
     }
 }
