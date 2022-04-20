@@ -4,17 +4,27 @@ pipeline {
     stages {
         stage('build'){
             steps{
-                sh " ./gradlew war"
-
-
+            	echo 'building...'
+            	sh 'chmod +x gradlew'
+                sh './gradlew war'
+                echo 'build success!!'
             }
         }
-        stage('Deploy'){
-            steps{
-				sh ""
-                echo 'SUCCESSFULLY DONE'
-            }
-        }
+        stage('deploy'){
+			steps{
+				echo 'deploying...'	
+				sh 'rm -rf /home/tomcat9_instance/instance1/webapps/projectlist.war'
+				sh 'mv build/libs/* /home/tomcat9_instance/instance1/webapps/'
+			}
+		}
+		stage('execute'){
+			steps{
+				echo 'starting...'
+				// sh "쉘 끄고 키고 ㄱ"
+			}		
+		}
+		
+		
     }
 }
 
