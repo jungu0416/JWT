@@ -6,7 +6,7 @@
 <mapper namespace = "dev.potatoo.projectlist.mapper.MainMapper">
 	
 	<select id = "loginCheck" resultType = "String" parameterType="UserDTO">
-		select count(*) from member where userID = #{userID};
+		select count(*) from member where userID = #{userID} and userPW = #{userPW};
 	</select>
 		
 </mapper>

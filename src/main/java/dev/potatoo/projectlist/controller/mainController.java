@@ -31,10 +31,7 @@ public class mainController {
 	public String loginCheck(HttpServletRequest request, @ModelAttribute UserDTO userDTO) {
 		HttpSession session = request.getSession();
 		
-		String test = mainService.loginCheck(userDTO);
-		
-		System.out.println("test : " + test);
-		
+		mainService.loginCheck(userDTO);
 		
 		return "introduce";
 	}
