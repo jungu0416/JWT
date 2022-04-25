@@ -1,7 +1,11 @@
+def javaHome
 
 pipeline {
     agent any
     stages {
+		stage('Environment') {
+         javaHome = tool "Java8"
+      	}
         stage('build'){
             steps{
             	echo 'building...'
