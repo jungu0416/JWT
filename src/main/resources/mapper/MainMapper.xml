@@ -6,7 +6,7 @@
 <mapper namespace = "dev.potatoo.projectlist.mapper.MainMapper">
 	
 	<select id = "loginCheck" resultType = "String" parameterType="UserDTO">
-		select count(*) from member where userID = #{userID} and userPW = #{userPW};
+		<!-- SHA256 or 스프링시큐리티 써서 구현 -->
 	</select>
 		
 </mapper>
