@@ -33,13 +33,9 @@ public class mainController {
 		
 		mainService.loginCheck(userDTO);
 		
-		return "introduce";
+		return null;
 	}
-	
-	@RequestMapping("/introduce")
-	public String introduce() {
-		return "introduce";
-	}
+
 	
 	
 	

@@ -38,14 +38,14 @@ tasks.named('test') {
 }
 
 bootWar{
-	archiveBaseName = 'projectlist'
-	archiveFileName = 'projectlist.war'
+	archiveBaseName = 'jwt'
+	archiveFileName = 'jwt.war'
 	archiveVersion = "0.0.0"
 }
 
 war {
-    baseName = 'projectlist'
-    archiveName 'projectlist.war'
+    baseName = 'jwt'
+    archiveName 'jwt.war'
 }
 
 bootWar.enabled = false
