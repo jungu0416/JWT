@@ -5,6 +5,3 @@
 
 ## About
 * jjwt 라이브러리 사용
-
-## ekse
-* jjwt 라이브러리 만을 이용해 token 생성
