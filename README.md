@@ -1,2 +1,2 @@
 # JWT
-JWT 에 대해서 공부해보자 ^^ 22-09-15
+Spring Security 없이 jjwt로 기본부터 차근차근
