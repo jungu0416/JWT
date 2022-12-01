@@ -7,7 +7,6 @@ import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.UnsupportedJwtException;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.RequiredArgsConstructor;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -15,10 +14,9 @@ import java.util.Map;
 
 @Data
 @AllArgsConstructor
-public class TESTJWT {
+public class PotatooJwt {
     final String key = "secret";
     private UserDTO dto;
-
 
     //토큰 생성
     public String createToken(){
@@ -31,7 +29,7 @@ public class TESTJWT {
         //payload 부분 설정
         Map<String,Object> payloads = new HashMap<>();
         payloads.put("data","{" +
-                "userID --> " + dto.getUserID() +
+                "userID --> " + dto.getUserID() + " , " +
                 "userPW --> " + dto.getUserPW() +
                  "}");
 
