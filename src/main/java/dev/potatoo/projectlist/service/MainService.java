@@ -1,21 +1,29 @@
 package dev.potatoo.projectlist.service;
 
+import dev.potatoo.projectlist.jwt.TESTJWT;
 import org.springframework.stereotype.Service;
 
 import dev.potatoo.projectlist.dto.UserDTO;
-import dev.potatoo.projectlist.mapper.MainMapper;
 
 @Service
 public class MainService {
-	MainMapper mainMapper;
+	//MainMapper mainMapper;
 	
 	//생성자
-	public MainService(MainMapper mainMapper) {
-		this.mainMapper = mainMapper;
-	}
+//	public MainService(MainMapper mainMapper) {
+//		this.mainMapper = mainMapper;
+//	}
 	
 	public String loginCheck(UserDTO dto) {
-		return mainMapper.loginCheck(dto);
+
+		TESTJWT test = new TESTJWT(dto);
+
+		String jwt = test.createToken();
+
+		System.out.println(jwt);
+		System.out.println(test.verifyJWT(jwt));
+
+		return null;
 	}
 	
 	

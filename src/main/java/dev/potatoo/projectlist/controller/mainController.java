@@ -29,10 +29,12 @@ public class mainController {
 	
 	@RequestMapping("/loginCheck")
 	public String loginCheck(HttpServletRequest request, @ModelAttribute UserDTO userDTO) {
-		HttpSession session = request.getSession();
-		
 		mainService.loginCheck(userDTO);
-		
+
+
+
+
+
 		return null;
 	}
 

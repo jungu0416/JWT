@@ -7,5 +7,4 @@ public class UserDTO {
 	private String userID;
 	private String userPW;
 	
-	
 }
