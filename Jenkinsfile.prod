@@ -11,7 +11,7 @@ pipeline {
 			steps{
 				echo 'building...'
 				sh 'chmod +x gradlew'
-				sh './gradlew bootwar'
+				sh './gradlew bootJar'
 				echo 'build success!!'
 			}
 		}
@@ -24,8 +24,6 @@ pipeline {
 		stage('deploy'){
 			steps{
 				echo 'deploying...'	
-				//sh 'sudo rm -rf /home/travel-back/travel-restapi.war'
-				//sh 'sudo mv build/libs/* /home/travel-back/'
 				sh 'pwd'
 			}
 		}
